@@ -1,7 +1,8 @@
 {
-  "name": "template-ts-npm",
-  "version": "1.0.0",
-  "main": "src/index.ts",
+  "name": "@monadica/template-ts-npm",
+  "version": "1.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "rollup": "rollup -c",
@@ -19,9 +20,21 @@
     "library",
     "open-source"
   ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/monadicarts/template-ts-npm.git"
+  },
   "author": "Monadica <monadicarts@gmail.com>",
   "license": "MIT",
-  "description": "Base TypeScript NPM Project Template for Monadica.",
+  "description": "A TypeScript project template for npm packages",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-node-resolve": "^15.3.0",

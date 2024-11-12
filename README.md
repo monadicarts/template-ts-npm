@@ -99,30 +99,26 @@ Compile and publish your package when ready, following the Scripts section below
 Scripts
 
 A set of npm scripts are preconfigured to streamline development and publishing:
-	•	npm run build: Compiles TypeScript to JavaScript in multiple module formats (ESM, CommonJS, UMD, AMD).
-	•	npm test: Runs Jest tests.
-	•	npm run lint: Checks code for linting errors using ESLint.
-	•	npm run format: Formats code with Prettier.
-	•	npm run docs: Generates documentation with TypeDoc.
-	•	npm run release: Bumps version and updates changelog based on commit messages using standard-version.
-	•	npm publish: Publishes the package to npm (run after npm run release).
+• npm run build: Compiles TypeScript to JavaScript in multiple module formats (ESM, CommonJS, UMD, AMD).
+• npm test: Runs Jest tests.
+• npm run lint: Checks code for linting errors using ESLint.
+• npm run format: Formats code with Prettier.
+• npm run docs: Generates documentation with TypeDoc.
+• npm run release: Bumps version and updates changelog based on commit messages using standard-version.
+• npm publish: Publishes the package to npm (run after npm run release).
 
 Configuration
 
 This template includes configuration files for various tools, such as:
-	•	TypeScript (tsconfig.json): Configures compiler options and output.
-	•	ESLint (.eslintrc.js): Configures linting rules for code consistency.
-	•	Prettier (.prettierrc): Configures formatting rules for consistent style.
-	•	Jest (jest.config.js): Configures Jest for unit testing.
-	•	TypeDoc (typedoc.json): Configures TypeDoc for documentation generation.
+• TypeScript (tsconfig.json): Configures compiler options and output.
+• ESLint (.eslintrc.js): Configures linting rules for code consistency.
+• Prettier (.prettierrc): Configures formatting rules for consistent style.
+• Jest (jest.config.js): Configures Jest for unit testing.
+• TypeDoc (typedoc.json): Configures TypeDoc for documentation generation.
 
 Contributing
 
-We welcome contributions! To contribute:
-	1.	Fork the repository and create a new branch (git checkout -b feature/YourFeature).
-	2.	Make your changes and commit them (git commit -m "Add feature").
-	3.	Push to the branch (git push origin feature/YourFeature).
-	4.	Open a Pull Request.
+We welcome contributions! To contribute: 1. Fork the repository and create a new branch (git checkout -b feature/YourFeature). 2. Make your changes and commit them (git commit -m "Add feature"). 3. Push to the branch (git push origin feature/YourFeature). 4. Open a Pull Request.
 
 If you have any questions or suggestions, please reach out to us at monadicarts@gmail.com.
 
@@ -136,8 +132,8 @@ Thank you for using `template-ts-npm`! We hope this template helps you create am
 
 Contact
 
-	•	GitHub: https://github.com/monadicarts
-	•	Website: monadica.com
-	•	Email: monadicarts@gmail.com
+    •	GitHub: https://github.com/monadicarts
+    •	Website: monadica.com
+    •	Email: monadicarts@gmail.com
 
 Happy Coding! 🚀
