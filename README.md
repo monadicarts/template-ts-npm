@@ -20,7 +20,7 @@ Welcome to **template-ts-npm**, an elegant and modular TypeScript project templa
 ## Features
 
 - **TypeScript**: Type-safe development with easy compilation to various JavaScript module formats.
-- **ESM, CommonJS, UMD, and AMD Support**: Out-of-the-box multi-module format support for broad compatibility.
+- **ESM Support**: Out-of-the-box ESM format support for broad compatibility.
 - **Testing with Jest**: Write robust unit tests with Jest.
 - **Linting and Formatting**: Ensure code consistency with ESLint and Prettier.
 - **Automatic Documentation**: Generate documentation from TSDoc comments with TypeDoc.
@@ -57,9 +57,9 @@ Replace template-ts-npm with your project name in package.json, README.md, and o
 
 You’re now ready to start building your own TypeScript npm package!
 
-Project Structure
+## Project Structure
 
-```bash
+```
 template-ts-npm/
 ├── src/                 # Main source code
 │   └── index.ts         # Entry point of the library
@@ -76,7 +76,7 @@ template-ts-npm/
 └── README.md            # Project documentation
 ```
 
-Usage
+## Usage
 
 After setting up the template and customizing it for your project, you can start adding your TypeScript code in the src/ directory.
 
@@ -96,33 +96,40 @@ export class Greeter {
 
 Compile and publish your package when ready, following the Scripts section below.
 
-Scripts
+## Scripts
 
 A set of npm scripts are preconfigured to streamline development and publishing:
-• npm run build: Compiles TypeScript to JavaScript in multiple module formats (ESM, CommonJS, UMD, AMD).
-• npm test: Runs Jest tests.
-• npm run lint: Checks code for linting errors using ESLint.
-• npm run format: Formats code with Prettier.
-• npm run docs: Generates documentation with TypeDoc.
-• npm run release: Bumps version and updates changelog based on commit messages using standard-version.
-• npm publish: Publishes the package to npm (run after npm run release).
 
-Configuration
+- `npm run build`: Compiles TypeScript to a JavaScript ESM module.
+- `npm test`: Runs Jest tests.
+- `npm run lint`: Checks code for linting errors using ESLint.
+- `npm run format`: Formats code with Prettier.
+- `npm run docs`: Generates documentation with TypeDoc.
+- `npm run release`: Bumps version and updates changelog based on commit messages using standard-version.
+- `npm publish`: Publishes the package to npm.
+
+## Configuration
 
 This template includes configuration files for various tools, such as:
-• TypeScript (tsconfig.json): Configures compiler options and output.
-• ESLint (.eslintrc.js): Configures linting rules for code consistency.
-• Prettier (.prettierrc): Configures formatting rules for consistent style.
-• Jest (jest.config.js): Configures Jest for unit testing.
-• TypeDoc (typedoc.json): Configures TypeDoc for documentation generation.
 
-Contributing
+- TypeScript (`tsconfig.json`): Configures compiler options and output.
+- ESLint (`.eslintrc.js`): Configures linting rules for code consistency.
+- Prettier (`.prettierrc`): Configures formatting rules for consistent style.
+- Jest (`jest.config.js`): Configures Jest for unit testing.
+- TypeDoc (`typedoc.json`): Configures TypeDoc for documentation generation.
 
-We welcome contributions! To contribute: 1. Fork the repository and create a new branch (git checkout -b feature/YourFeature). 2. Make your changes and commit them (git commit -m "Add feature"). 3. Push to the branch (git push origin feature/YourFeature). 4. Open a Pull Request.
+## Contributing
+
+We welcome contributions! To contribute:
+
+1. Fork the repository and create a new branch (`git checkout -b feature/YourFeature`).
+2. Make your changes and commit them (`git commit -m "Add feature"`).
+3. Push to the branch (`git push origin feature/YourFeature`).
+4. Open a Pull Request.
 
 If you have any questions or suggestions, please reach out to us at monadicarts@gmail.com.
 
-License
+## License
 
 This project is licensed under the MIT License.
 
@@ -130,10 +137,10 @@ Developed and maintained by Monadica.
 
 Thank you for using `template-ts-npm`! We hope this template helps you create amazing TypeScript npm packages with ease.
 
-Contact
+## Contact
 
-    •	GitHub: https://github.com/monadicarts
-    •	Website: monadica.com
-    •	Email: monadicarts@gmail.com
+- GitHub: [github.com/monadicarts](https://github.com/monadicarts)
+- Website: [monadica.com](https://monadica.com)
+- Email: [monadicarts@gmail.com](mailto://monadicarts@gmail.com)
 
 Happy Coding! 🚀

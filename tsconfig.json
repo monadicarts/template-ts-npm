@@ -1,20 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "esnext", // Change this from "commonjs" to "esnext"
+    "target": "ES2018",
+    "module": "UMD", // Change this from "commonjs" to "esnext"
     "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
     "outDir": "./dist",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-    "lib": ["es6", "dom"],
-    "types": ["jest"]
+    "lib": ["DOM", "ES2018"]
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist", "**/__tests__/*"]
+  "exclude": ["node_modules", "dist", "**/__tests__"]
 }

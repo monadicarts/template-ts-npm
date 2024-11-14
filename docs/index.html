@@ -118,9 +118,8 @@
               compilation to various JavaScript module formats.
             </li>
             <li>
-              <strong>ESM, CommonJS, UMD, and AMD Support</strong>:
-              Out-of-the-box multi-module format support for broad
-              compatibility.
+              <strong>ESM Support</strong>: Out-of-the-box ESM format support
+              for broad compatibility.
             </li>
             <li>
               <strong>Testing with Jest</strong>: Write robust unit tests with
@@ -193,11 +192,29 @@
           <p>
             You’re now ready to start building your own TypeScript npm package!
           </p>
-          <p>Project Structure</p>
-          <pre><code class="bash"><span class="hl-0">template-ts-npm/</span><br/><span class="hl-0">├──</span><span class="hl-1"> </span><span class="hl-2">src/</span><span class="hl-1">                 </span><span class="hl-3"># Main source code</span><br/><span class="hl-0">│</span><span class="hl-1">   </span><span class="hl-2">└──</span><span class="hl-1"> </span><span class="hl-2">index.ts</span><span class="hl-1">         </span><span class="hl-3"># Entry point of the library</span><br/><span class="hl-0">├──</span><span class="hl-1"> </span><span class="hl-2">dist/</span><span class="hl-1">                </span><span class="hl-3"># Compiled output</span><br/><span class="hl-0">├──</span><span class="hl-1"> </span><span class="hl-2">__tests__/</span><span class="hl-1">           </span><span class="hl-3"># Unit tests</span><br/><span class="hl-0">├──</span><span class="hl-1"> </span><span class="hl-2">.husky/</span><span class="hl-1">              </span><span class="hl-3"># Git hooks for automated checks</span><br/><span class="hl-0">├──</span><span class="hl-1"> </span><span class="hl-2">.eslintrc.js</span><span class="hl-1">         </span><span class="hl-3"># ESLint configuration</span><br/><span class="hl-0">├──</span><span class="hl-1"> </span><span class="hl-2">.prettierrc</span><span class="hl-1">          </span><span class="hl-3"># Prettier configuration</span><br/><span class="hl-0">├──</span><span class="hl-1"> </span><span class="hl-2">package.json</span><span class="hl-1">         </span><span class="hl-3"># Project metadata and dependencies</span><br/><span class="hl-0">├──</span><span class="hl-1"> </span><span class="hl-2">tsconfig.json</span><span class="hl-1">        </span><span class="hl-3"># TypeScript configuration</span><br/><span class="hl-0">├──</span><span class="hl-1"> </span><span class="hl-2">rollup.config.js</span><span class="hl-1">     </span><span class="hl-3"># Rollup configuration (optional, for advanced bundling)</span><br/><span class="hl-0">├──</span><span class="hl-1"> </span><span class="hl-2">jest.config.js</span><span class="hl-1">       </span><span class="hl-3"># Jest configuration for testing</span><br/><span class="hl-0">├──</span><span class="hl-1"> </span><span class="hl-2">typedoc.json</span><span class="hl-1">         </span><span class="hl-3"># TypeDoc configuration for documentation</span><br/><span class="hl-0">└──</span><span class="hl-1"> </span><span class="hl-2">README.md</span><span class="hl-1">            </span><span class="hl-3"># Project documentation</span>
-</code><button type="button">Copy</button></pre>
+          <a id="md:project-structure" class="tsd-anchor"></a>
+          <h2 class="tsd-anchor-link">
+            Project Structure<a
+              href="#md:project-structure"
+              aria-label="Permalink"
+              class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24">
+                <use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
+          <pre><code><span class="hl-3">template</span><span class="hl-1">-</span><span class="hl-3">ts</span><span class="hl-1">-</span><span class="hl-3">npm</span><span class="hl-1">/</span><br/><span class="hl-1">├── </span><span class="hl-3">src</span><span class="hl-1">/                 # </span><span class="hl-3">Main</span><span class="hl-1"> </span><span class="hl-3">source</span><span class="hl-1"> </span><span class="hl-3">code</span><br/><span class="hl-1">│   └── </span><span class="hl-3">index</span><span class="hl-1">.</span><span class="hl-3">ts</span><span class="hl-1">         # </span><span class="hl-3">Entry</span><span class="hl-1"> </span><span class="hl-3">point</span><span class="hl-1"> </span><span class="hl-4">of</span><span class="hl-1"> </span><span class="hl-3">the</span><span class="hl-1"> </span><span class="hl-3">library</span><br/><span class="hl-1">├── </span><span class="hl-3">dist</span><span class="hl-1">/                # </span><span class="hl-3">Compiled</span><span class="hl-1"> </span><span class="hl-3">output</span><br/><span class="hl-1">├── </span><span class="hl-3">__tests__</span><span class="hl-1">/           # </span><span class="hl-3">Unit</span><span class="hl-1"> </span><span class="hl-3">tests</span><br/><span class="hl-1">├── .</span><span class="hl-3">husky</span><span class="hl-1">/              # </span><span class="hl-3">Git</span><span class="hl-1"> </span><span class="hl-3">hooks</span><span class="hl-1"> </span><span class="hl-3">for</span><span class="hl-1"> </span><span class="hl-3">automated</span><span class="hl-1"> </span><span class="hl-3">checks</span><br/><span class="hl-1">├── .</span><span class="hl-3">eslintrc</span><span class="hl-1">.</span><span class="hl-3">js</span><span class="hl-1">         # </span><span class="hl-3">ESLint</span><span class="hl-1"> </span><span class="hl-3">configuration</span><br/><span class="hl-1">├── .</span><span class="hl-3">prettierrc</span><span class="hl-1">          # </span><span class="hl-3">Prettier</span><span class="hl-1"> </span><span class="hl-3">configuration</span><br/><span class="hl-1">├── </span><span class="hl-3">package</span><span class="hl-1">.</span><span class="hl-3">json</span><span class="hl-1">         # </span><span class="hl-3">Project</span><span class="hl-1"> </span><span class="hl-3">metadata</span><span class="hl-1"> </span><span class="hl-3">and</span><span class="hl-1"> </span><span class="hl-3">dependencies</span><br/><span class="hl-1">├── </span><span class="hl-3">tsconfig</span><span class="hl-1">.</span><span class="hl-3">json</span><span class="hl-1">        # </span><span class="hl-3">TypeScript</span><span class="hl-1"> </span><span class="hl-3">configuration</span><br/><span class="hl-1">├── </span><span class="hl-3">rollup</span><span class="hl-1">.</span><span class="hl-3">config</span><span class="hl-1">.</span><span class="hl-3">js</span><span class="hl-1">     # </span><span class="hl-3">Rollup</span><span class="hl-1"> </span><span class="hl-0">configuration</span><span class="hl-1"> (</span><span class="hl-3">optional</span><span class="hl-1">, </span><span class="hl-3">for</span><span class="hl-1"> </span><span class="hl-3">advanced</span><span class="hl-1"> </span><span class="hl-3">bundling</span><span class="hl-1">)</span><br/><span class="hl-1">├── </span><span class="hl-3">jest</span><span class="hl-1">.</span><span class="hl-3">config</span><span class="hl-1">.</span><span class="hl-3">js</span><span class="hl-1">       # </span><span class="hl-3">Jest</span><span class="hl-1"> </span><span class="hl-3">configuration</span><span class="hl-1"> </span><span class="hl-3">for</span><span class="hl-1"> </span><span class="hl-3">testing</span><br/><span class="hl-1">├── </span><span class="hl-3">typedoc</span><span class="hl-1">.</span><span class="hl-3">json</span><span class="hl-1">         # </span><span class="hl-3">TypeDoc</span><span class="hl-1"> </span><span class="hl-3">configuration</span><span class="hl-1"> </span><span class="hl-3">for</span><span class="hl-1"> </span><span class="hl-3">documentation</span><br/><span class="hl-1">└── </span><span class="hl-5">README</span><span class="hl-1">.</span><span class="hl-3">md</span><span class="hl-1">            # </span><span class="hl-3">Project</span><span class="hl-1"> </span><span class="hl-3">documentation</span>
+</code><button>Copy</button></pre>
 
-          <p>Usage</p>
+          <a id="md:usage" class="tsd-anchor"></a>
+          <h2 class="tsd-anchor-link">
+            Usage<a
+              href="#md:usage"
+              aria-label="Permalink"
+              class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24">
+                <use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
           <p>
             After setting up the template and customizing it for your project,
             you can start adding your TypeScript code in the src/ directory.
@@ -207,59 +224,163 @@
             entry point for your npm package. Here’s an example of a basic
             function and class you can add:
           </p>
-          <pre><code class="typescript"><span class="hl-3">// src/index.ts</span><br/><span class="hl-4">export</span><span class="hl-1"> </span><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-0">greet</span><span class="hl-1"> = (</span><span class="hl-6">name</span><span class="hl-1">: </span><span class="hl-7">string</span><span class="hl-1">): </span><span class="hl-7">string</span><span class="hl-1"> </span><span class="hl-5">=&gt;</span><span class="hl-1"> </span><span class="hl-2">`Hello, </span><span class="hl-5">${</span><span class="hl-6">name</span><span class="hl-5">}</span><span class="hl-2">!`</span><span class="hl-1">;</span><br/><br/><span class="hl-4">export</span><span class="hl-1"> </span><span class="hl-5">class</span><span class="hl-1"> </span><span class="hl-7">Greeter</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-5">constructor</span><span class="hl-1">(</span><span class="hl-5">public</span><span class="hl-1"> </span><span class="hl-6">greeting</span><span class="hl-1">: </span><span class="hl-7">string</span><span class="hl-1">) {}</span><br/><span class="hl-1">  </span><span class="hl-0">greet</span><span class="hl-1">(</span><span class="hl-6">name</span><span class="hl-1">: </span><span class="hl-7">string</span><span class="hl-1">): </span><span class="hl-7">string</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-4">return</span><span class="hl-1"> </span><span class="hl-2">`</span><span class="hl-5">${</span><span class="hl-5">this</span><span class="hl-8">.</span><span class="hl-6">greeting</span><span class="hl-5">}</span><span class="hl-2">, </span><span class="hl-5">${</span><span class="hl-6">name</span><span class="hl-5">}</span><span class="hl-2">!`</span><span class="hl-1">;</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
+          <pre><code class="typescript"><span class="hl-6">// src/index.ts</span><br/><span class="hl-7">export</span><span class="hl-1"> </span><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-0">greet</span><span class="hl-1"> = (</span><span class="hl-3">name</span><span class="hl-1">: </span><span class="hl-8">string</span><span class="hl-1">): </span><span class="hl-8">string</span><span class="hl-1"> </span><span class="hl-4">=&gt;</span><span class="hl-1"> </span><span class="hl-2">`Hello, </span><span class="hl-4">${</span><span class="hl-3">name</span><span class="hl-4">}</span><span class="hl-2">!`</span><span class="hl-1">;</span><br/><br/><span class="hl-7">export</span><span class="hl-1"> </span><span class="hl-4">class</span><span class="hl-1"> </span><span class="hl-8">Greeter</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-4">constructor</span><span class="hl-1">(</span><span class="hl-4">public</span><span class="hl-1"> </span><span class="hl-3">greeting</span><span class="hl-1">: </span><span class="hl-8">string</span><span class="hl-1">) {}</span><br/><span class="hl-1">  </span><span class="hl-0">greet</span><span class="hl-1">(</span><span class="hl-3">name</span><span class="hl-1">: </span><span class="hl-8">string</span><span class="hl-1">): </span><span class="hl-8">string</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-7">return</span><span class="hl-1"> </span><span class="hl-2">`</span><span class="hl-4">${</span><span class="hl-4">this</span><span class="hl-9">.</span><span class="hl-3">greeting</span><span class="hl-4">}</span><span class="hl-2">, </span><span class="hl-4">${</span><span class="hl-3">name</span><span class="hl-4">}</span><span class="hl-2">!`</span><span class="hl-1">;</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
 </code><button type="button">Copy</button></pre>
 
           <p>
             Compile and publish your package when ready, following the Scripts
             section below.
           </p>
-          <p>Scripts</p>
+          <a id="md:scripts" class="tsd-anchor"></a>
+          <h2 class="tsd-anchor-link">
+            Scripts<a
+              href="#md:scripts"
+              aria-label="Permalink"
+              class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24">
+                <use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
           <p>
             A set of npm scripts are preconfigured to streamline development and
-            publishing: • npm run build: Compiles TypeScript to JavaScript in
-            multiple module formats (ESM, CommonJS, UMD, AMD). • npm test: Runs
-            Jest tests. • npm run lint: Checks code for linting errors using
-            ESLint. • npm run format: Formats code with Prettier. • npm run
-            docs: Generates documentation with TypeDoc. • npm run release: Bumps
-            version and updates changelog based on commit messages using
-            standard-version. • npm publish: Publishes the package to npm (run
-            after npm run release).
+            publishing:
           </p>
-          <p>Configuration</p>
+          <ul>
+            <li>
+              <code>npm run build</code>: Compiles TypeScript to a JavaScript
+              ESM module.
+            </li>
+            <li><code>npm test</code>: Runs Jest tests.</li>
+            <li>
+              <code>npm run lint</code>: Checks code for linting errors using
+              ESLint.
+            </li>
+            <li><code>npm run format</code>: Formats code with Prettier.</li>
+            <li>
+              <code>npm run docs</code>: Generates documentation with TypeDoc.
+            </li>
+            <li>
+              <code>npm run release</code>: Bumps version and updates changelog
+              based on commit messages using standard-version.
+            </li>
+            <li><code>npm publish</code>: Publishes the package to npm.</li>
+          </ul>
+          <a id="md:configuration" class="tsd-anchor"></a>
+          <h2 class="tsd-anchor-link">
+            Configuration<a
+              href="#md:configuration"
+              aria-label="Permalink"
+              class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24">
+                <use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
           <p>
             This template includes configuration files for various tools, such
-            as: • TypeScript (tsconfig.json): Configures compiler options and
-            output. • ESLint (.eslintrc.js): Configures linting rules for code
-            consistency. • Prettier (.prettierrc): Configures formatting rules
-            for consistent style. • Jest (jest.config.js): Configures Jest for
-            unit testing. • TypeDoc (typedoc.json): Configures TypeDoc for
-            documentation generation.
+            as:
           </p>
-          <p>Contributing</p>
-          <p>
-            We welcome contributions! To contribute: 1. Fork the repository and
-            create a new branch (git checkout -b feature/YourFeature). 2. Make
-            your changes and commit them (git commit -m &quot;Add
-            feature&quot;). 3. Push to the branch (git push origin
-            feature/YourFeature). 4. Open a Pull Request.
-          </p>
+          <ul>
+            <li>
+              TypeScript (<code>tsconfig.json</code>): Configures compiler
+              options and output.
+            </li>
+            <li>
+              ESLint (<code>.eslintrc.js</code>): Configures linting rules for
+              code consistency.
+            </li>
+            <li>
+              Prettier (<code>.prettierrc</code>): Configures formatting rules
+              for consistent style.
+            </li>
+            <li>
+              Jest (<code>jest.config.js</code>): Configures Jest for unit
+              testing.
+            </li>
+            <li>
+              TypeDoc (<code>typedoc.json</code>): Configures TypeDoc for
+              documentation generation.
+            </li>
+          </ul>
+          <a id="md:contributing" class="tsd-anchor"></a>
+          <h2 class="tsd-anchor-link">
+            Contributing<a
+              href="#md:contributing"
+              aria-label="Permalink"
+              class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24">
+                <use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
+          <p>We welcome contributions! To contribute:</p>
+          <ol>
+            <li>
+              Fork the repository and create a new branch (<code
+                >git checkout -b feature/YourFeature</code
+              >).
+            </li>
+            <li>
+              Make your changes and commit them (<code
+                >git commit -m &quot;Add feature&quot;</code
+              >).
+            </li>
+            <li>
+              Push to the branch (<code
+                >git push origin feature/YourFeature</code
+              >).
+            </li>
+            <li>Open a Pull Request.</li>
+          </ol>
           <p>
             If you have any questions or suggestions, please reach out to us at
             <a href="mailto:monadicarts@gmail.com">monadicarts@gmail.com</a>.
           </p>
-          <p>License</p>
+          <a id="md:license" class="tsd-anchor"></a>
+          <h2 class="tsd-anchor-link">
+            License<a
+              href="#md:license"
+              aria-label="Permalink"
+              class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24">
+                <use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
           <p>This project is licensed under the MIT License.</p>
           <p>Developed and maintained by Monadica.</p>
           <p>
             Thank you for using <code>template-ts-npm</code>! We hope this
             template helps you create amazing TypeScript npm packages with ease.
           </p>
-          <p>Contact</p>
-          <pre><code>•	GitHub: https://github.com/monadicarts
-•	Website: monadica.com
-•	Email: monadicarts@gmail.com
-</code></pre>
+          <a id="md:contact" class="tsd-anchor"></a>
+          <h2 class="tsd-anchor-link">
+            Contact<a
+              href="#md:contact"
+              aria-label="Permalink"
+              class="tsd-anchor-icon"
+              ><svg viewBox="0 0 24 24">
+                <use href="assets/icons.svg#icon-anchor"></use></svg
+            ></a>
+          </h2>
+          <ul>
+            <li>
+              GitHub:
+              <a
+                href="https://github.com/monadicarts"
+                target="_blank"
+                class="external"
+                >https://github.com/monadicarts</a
+              >
+            </li>
+            <li>
+              Website:
+              <a href="http://monadica.com" target="_blank" class="external"
+                >monadica.com</a
+              >
+            </li>
+            <li>
+              Email:
+              <a href="mailto:monadicarts@gmail.com">monadicarts@gmail.com</a>
+            </li>
+          </ul>
           <p>Happy Coding! 🚀</p>
         </div>
       </div>
@@ -424,6 +545,29 @@
                       >
                     </li>
                   </ul>
+                </li>
+                <li>
+                  <a href="#md:project-structure"
+                    ><span>Project <wbr />Structure</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#md:usage"><span>Usage</span></a>
+                </li>
+                <li>
+                  <a href="#md:scripts"><span>Scripts</span></a>
+                </li>
+                <li>
+                  <a href="#md:configuration"><span>Configuration</span></a>
+                </li>
+                <li>
+                  <a href="#md:contributing"><span>Contributing</span></a>
+                </li>
+                <li>
+                  <a href="#md:license"><span>License</span></a>
+                </li>
+                <li>
+                  <a href="#md:contact"><span>Contact</span></a>
                 </li>
               </ul>
             </div>
