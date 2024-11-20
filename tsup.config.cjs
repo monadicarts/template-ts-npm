@@ -8,5 +8,5 @@ export default defineConfig({
   legacyOutput: true,
   minify: true,
   metafile: true,
-  target: "ES2018"
+  target: "ES2018",
 });

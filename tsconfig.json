@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
     "target": "ES2018",
-    "module": "UMD", // Change this from "commonjs" to "esnext"
+    "module": "UMD",
     "declaration": true,
+    "declarationMap": true,
     "outDir": "./dist",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "sourceMap": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "lib": ["DOM", "ES2018"]
