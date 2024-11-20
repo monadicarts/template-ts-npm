@@ -3,16 +3,15 @@
     "target": "ES2018",
     "module": "UMD",
     "declaration": true,
-    "declarationMap": true,
-    "outDir": "./dist",
+    "outDir": "dist",
     "strict": true,
+    "downlevelIteration": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "sourceMap": true,
+    "skipLibCheck": false,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "lib": ["DOM", "ES2018"]
+    "lib": ["ES2018", "DOM"]
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist", "**/__tests__"]
+  "exclude": ["node_modules"]
 }

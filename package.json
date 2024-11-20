@@ -1,16 +1,16 @@
 {
   "name": "@monadica/template-ts-npm",
   "version": "1.2.0",
-  "source": "src/index.ts",
-  "browser": "dist/index.js",
-  "main": "dist/main.js",
-  "module": "dist/module.js",
-  "types": "dist/types.d.ts",
+  "source": "./src/index.ts",
+  "main": "./dist/main.js",
+  "types": "./dist/types.d.ts",
+  "module": "./dist/index.mjs",
+  "browser": "./dist/index.js",
   "type": "module",
   "scripts": {
     "serve": "parcel docs/index.html --open firefox",
     "watch": "parcel watch",
-    "prebuild": "npx rimraf dist/*",
+    "prebuild": "npx rimraf dist && mkdir dist",
     "build": "parcel build src/index.ts",
     "prepare": "npm run build",
     "precompress": "rm dist/template-ts-npm.*",
@@ -18,7 +18,7 @@
     "test": "jest",
     "docs": "typedoc",
     "postdocs": "npm run format",
-    "lint": "eslint ./src",
+    "lint": "eslint --fix .",
     "postlint": "npm run format",
     "format": "prettier --write .",
     "release": "standard-version",
@@ -48,12 +48,15 @@
   "license": "MIT",
   "description": "A TypeScript project template for npm packages",
   "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.15.0",
     "@parcel/bundler-library": "^2.12.0",
     "@parcel/compressor-brotli": "^2.13.0",
     "@parcel/compressor-gzip": "^2.13.0",
     "@parcel/optimizer-cssnano": "^2.13.0",
     "@parcel/optimizer-terser": "^2.13.0",
     "@parcel/packager-ts": "^2.13.0",
+    "@parcel/transformer-babel": "^2.13.0",
     "@parcel/transformer-typescript-tsc": "^2.13.0",
     "@parcel/transformer-typescript-types": "^2.13.0",
     "@types/jest": "^29.5.14",
@@ -87,12 +90,45 @@
     }
   },
   "targets": {
-    "default": {
-      "distDir": "./dist"
+    "main": {
+      "distDir": "./dist",
+      "context": "node",
+      "isLibrary": true,
+      "scopeHoist": true,
+      "sourceMap": true,
+      "engines": {
+        "node": ">=23.0.0 <24.0.0"
+      }
+    },
+    "module": {
+      "distDir": "./dist",
+      "context": "node",
+      "isLibrary": true,
+      "scopeHoist": true,
+      "sourceMap": true,
+      "engines": {
+        "node": ">=23.0.0 <24.0.0"
+      }
+    },
+    "browser": {
+      "distDir": "./dist",
+      "context": "browser",
+      "isLibrary": true,
+      "scopeHoist": true,
+      "sourceMap": {
+        "inline": true
+      },
+      "engines": {
+        "browsers": "> 0.25%"
+      }
     }
   },
-  "engines": {
-    "npm": ">=10.0.0 <11.0.0",
-    "node": ">=23.0.0 <24.0.0"
-  }
+  "browserslist": "> 0.2%, last 2 versions, not dead",
+  "directories": {
+    "doc": "docs"
+  },
+  "bugs": {
+    "url": "https://github.com/monadicarts/template-ts-npm/issues"
+  },
+  "homepage": "https://github.com/monadicarts/template-ts-npm#readme"
 }

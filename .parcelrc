@@ -1,8 +1,14 @@
 {
   "extends": "@parcel/config-default",
   "bundler": "@parcel/bundler-library",
+  "packagers": {
+    "*.js": "@parcel/packager-js"
+  },
   "transformers": {
-    "*.ts": ["@parcel/transformer-typescript-tsc"]
+    "*.{ts,tsx}": [
+      "@parcel/transformer-typescript-tsc",
+      "@parcel/transformer-babel"
+    ]
   },
   "optimizers": {
     "*.js": [
