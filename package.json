@@ -1,6 +1,6 @@
 {
   "name": "@monadica/template-ts-npm",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "source": "./src/index.ts",
   "main": "./dist/main.js",
   "types": "./dist/types.d.ts",

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/monadicarts/template-ts-npm/compare/v1.2.0...v1.2.1) (2024-11-20)
+
+
+### Bug Fixes
+
+* parcel issues addressed ([76b07fe](https://github.com/monadicarts/template-ts-npm/commit/76b07fe1e390b6f0013377f07d6a7a3426ab11bb))
+
 ## 1.2.0 (2024-11-20)
 
 
